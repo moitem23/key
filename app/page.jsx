@@ -58,7 +58,7 @@ const properties = [
     vrbo: "https://www.vrbo.com/5437161?dateless=true",
   },
   {
-    name: "The Signature",
+    name: "The Signature0",
     subtitle: "Resort Comfort in Scottsdale",
     description:
       "Comfortable Scottsdale living with resort-style community amenities and a convenient location.",
