@@ -51,6 +51,12 @@ a { color: inherit; text-decoration: none; }
   color: var(--navy);
 }
 
+.brand img {
+    width: 250px;
+    height: auto;
+	display: block;
+}
+
 .brand-mark {
   color: var(--gold);
   font-size: 36px;
@@ -119,7 +125,7 @@ nav a:hover { color: var(--gold); }
   z-index: -3;
   background:
     linear-gradient(90deg, rgba(248,242,231,1) 0%, rgba(248,242,231,.96) 10%, rgba(248,242,231,.28) 54%, rgba(0,0,0,.08)),
-    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=88") center/cover;
+    url("/images/sxottsdale_website_sunset.jpeg") center/cover;
 }
 
 .hero-wash {
@@ -182,6 +188,10 @@ nav a:hover { color: var(--gold); }
   color: white;
   background: linear-gradient(135deg, #a96700, #d18d16);
   box-shadow: 0 8px 22px rgba(151,95,0,.22);
+}
+
+.vrbo-btn {
+    margin-bottom: 10px !important;
 }
 
 .hero-script {
@@ -1103,98 +1113,31 @@ nav a:hover { color: var(--gold); }
   }
 
 }
-
 /* ========================================
    DISCOVER SCOTTSDALE
 ======================================== */
 
 .discover {
-  width: min(1180px, calc(100% - 48px));
-  margin:64px auto 70px;
+  width: min(480px, calc(100% - 48px));
+  margin: 64px auto 70px;
 
   padding: 0;
 
-  display: grid;
-  grid-template-columns: 1.18fr .82fr;
-
   min-height: 470px;
 
-  background: var(--cream-2);
+  background: #fffdf8;
 
   border: 5px solid #dfb36c;
 
   overflow: hidden;
 
   box-shadow: 0 12px 35px rgba(25, 34, 45, .08);
-}
-
-
-/* ========================================
-   IMAGE
-======================================== */
-
-.discover-photo {
-  position: relative;
-  min-height: 470px;
-
-  overflow: hidden;
-
-  background-image:
-    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=88");
-
-  background-size: cover;
-  background-position: center;
-}
-
-
-/* Image Overlay */
-
-.discover-photo-overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(6, 43, 80, .12),
-      rgba(6, 43, 80, .02)
-    );
-
-  pointer-events: none;
-}
-
-
-/* Image Label */
-
-.discover-photo-label {
-  position: absolute;
-
-  left: 30px;
-  bottom: 28px;
 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  color: white;
-
-  text-shadow: 0 2px 12px rgba(0, 0, 0, .45);
-}
-
-.discover-photo-label span {
-  margin-bottom: 2px;
-
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 4px;
-}
-
-.discover-photo-label strong {
-  font-family: "Cormorant Garamond", Georgia, serif;
-
-  font-size: 30px;
-  font-weight: 500;
-
-  letter-spacing: 4px;
+  position: relative;
 }
 
 
@@ -1205,18 +1148,26 @@ nav a:hover { color: var(--gold); }
 .discover-copy {
   position: relative;
 
+  width: 100%;
+  min-height: 470px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
   padding: 55px 50px;
 
   background: #fffdf8;
 
   overflow: hidden;
+
+  text-align: center;
 }
 
 
-/* Decorative Circle */
+/* ========================================
+   DECORATIVE CIRCLES
+======================================== */
 
 .discover-copy::before {
   content: "";
@@ -1234,8 +1185,6 @@ nav a:hover { color: var(--gold); }
   border-radius: 50%;
 }
 
-
-/* Second Decorative Circle */
 
 .discover-copy::after {
   content: "";
@@ -1262,8 +1211,12 @@ nav a:hover { color: var(--gold); }
   position: relative;
   z-index: 2;
 
-  max-width: 430px;
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
 }
+
 
 .discover-copy .overline {
   margin: 0 0 3px;
@@ -1300,7 +1253,7 @@ nav a:hover { color: var(--gold); }
   width: 55px;
   height: 2px;
 
-  margin: 22px 0 22px;
+  margin: 22px auto;
 
   background: var(--gold);
 }
@@ -1309,7 +1262,9 @@ nav a:hover { color: var(--gold); }
 /* Intro */
 
 .discover-intro {
-  margin: 0 0 13px;
+  margin: 0 auto 13px;
+
+  max-width: 600px;
 
   color: var(--navy);
 
@@ -1324,7 +1279,9 @@ nav a:hover { color: var(--gold); }
 /* Description */
 
 .discover-description {
-  margin: 0 0 26px;
+  margin: 0 auto 26px;
+
+  max-width: 580px;
 
   color: var(--muted);
 
@@ -1339,18 +1296,24 @@ nav a:hover { color: var(--gold); }
 ======================================== */
 
 .discover-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
   width: auto;
 
-  padding: 13px 22px;
-
-  font-size: 12px;
+  padding: 20px 27px;
+  font-size: 17px;
 
   box-shadow: 0 8px 20px rgba(151, 95, 0, .18);
 }
 
+
 .discover-button span {
   transition: transform .2s ease;
 }
+
 
 .discover-button:hover span {
   transform: translateX(4px);
@@ -1370,6 +1333,8 @@ nav a:hover { color: var(--gold); }
   color: #b97808;
 
   font-size: 22px;
+
+  z-index: 2;
 }
 
 
@@ -1380,16 +1345,12 @@ nav a:hover { color: var(--gold); }
 @media (max-width: 900px) {
 
   .discover {
-    grid-template-columns: 1fr 1fr;
-
-    min-height: 420px;
-  }
-
-  .discover-photo {
     min-height: 420px;
   }
 
   .discover-copy {
+    min-height: 420px;
+
     padding: 40px 32px;
   }
 
@@ -1409,51 +1370,34 @@ nav a:hover { color: var(--gold); }
   .discover {
     width: calc(100% - 28px);
 
-    grid-template-columns: 1fr;
+    min-height: 420px;
 
     margin-bottom: 30px;
   }
 
 
-  /* Image */
-
-  .discover-photo {
-    min-height: 280px;
-
-    background-position: center;
-  }
-
-
-  .discover-photo-label {
-    left: 22px;
-    bottom: 22px;
-  }
-
-  .discover-photo-label strong {
-    font-size: 26px;
-  }
-
-
-  /* Content */
-
   .discover-copy {
-    min-height: 390px;
+    min-height: 420px;
 
     padding: 42px 26px;
   }
 
+
   .discover-copy h2 {
     font-size: 68px;
   }
+
 
   .discover-copy .overline {
     font-size: 10px;
     letter-spacing: 3px;
   }
 
+
   .discover-intro {
     font-size: 14px;
   }
+
 
   .discover-description {
     font-size: 11px;
@@ -1465,6 +1409,7 @@ nav a:hover { color: var(--gold); }
 
   .discover-button {
     width: 100%;
+    max-width: 320px;
   }
 
 
@@ -1859,6 +1804,14 @@ nav a:hover { color: var(--gold); }
   color: var(--gold);
 }
 
+.contact-item a.gold-button {
+    color: #fff;
+	padding: 15px 18px;
+}
+
+.contact-item a.gold-button:hover {
+    transform: translateX(1px);
+}
 
 /* ========================================
    RESERVATION NOTICE
@@ -2020,6 +1973,7 @@ footer {
 }
 
 .footer-logo { color: #d99b29; font-size: 43px; }
+.footer-brand .footer-logo img {width: 250px;}
 
 .footer-links {
   display: flex;
@@ -2059,6 +2013,7 @@ footer {
 
 @media (max-width: 900px) {
   nav { display: none; }
+  .brand img {width: 170px;}
   .hero { min-height: 570px; }
   .hero-photo { inset: 0; opacity: .62; }
   .hero-wash { background: rgba(248,242,231,.68); }
@@ -2071,6 +2026,7 @@ footer {
   .booking-banner { gap: 30px; flex-direction: column; }
   .footer-main { grid-template-columns: 1fr; text-align: center; }
   .footer-brand, .contact-info { justify-content: center; }
+  .footer-brand .footer-logo img {width: 200px;}
 }
 
 @media (max-width: 600px) {
