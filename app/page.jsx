@@ -27,6 +27,24 @@ import {
 } from "lucide-react";
 
 const properties = [
+   {
+    name: "The Signature",
+    subtitle: "Resort Comfort in Scottsdale",
+    description:
+      "Comfortable Scottsdale living with resort-style community amenities and a convenient location.",
+    image:
+      "/images/signature.jpg",
+    features: [
+      { text: "2 Bedrooms", icon: BedDouble },
+      { text: "2 Bathrooms", icon: Bath },
+      { text: "2 heated pools + hot tub", icon: Waves },
+      {
+        text: "Fitness center, sauna, steam room & clubhouse",
+        icon: Dumbbell,
+      },
+    ],
+    vrbo: "https://www.vrbo.com/1541225?dateless=true",
+  },
   {
     name: "The Dutton",
     subtitle: "Western Scottsdale Style",
@@ -57,24 +75,7 @@ const properties = [
     ],
     vrbo: "https://www.vrbo.com/5437161?dateless=true",
   },
-  {
-    name: "The Signature0",
-    subtitle: "Resort Comfort in Scottsdale",
-    description:
-      "Comfortable Scottsdale living with resort-style community amenities and a convenient location.",
-    image:
-      "/images/signature.jpg",
-    features: [
-      { text: "2 Bedrooms", icon: BedDouble },
-      { text: "2 Bathrooms", icon: Bath },
-      { text: "2 heated pools + hot tub", icon: Waves },
-      {
-        text: "Fitness center, sauna, steam room & clubhouse",
-        icon: Dumbbell,
-      },
-    ],
-    vrbo: "https://www.vrbo.com/1541225?dateless=true",
-  },
+ 
 ];
 
 const events = [
@@ -107,12 +108,8 @@ export default function Home() {
       <header className="site-header">
         <div className="nav-shell">
           <a className="brand" href="#top">
-            <span className="brand-mark">♜</span>
-            <span>
-              <strong>THREE KEYS</strong>
-              <strong>SCOTTSDALE</strong>
-              <em>Your Scottsdale home away from home</em>
-            </span>
+            <img src="/images/Three_Key_Scottsdale_logo.png" alt="Three Key Scottsdale logo" />
+            
           </a>
 
           <nav>
@@ -124,7 +121,7 @@ export default function Home() {
           </nav>
 
           <a className="nav-book" href="#stays">
-            <span>▣</span> Check Availability
+            Check Availability
           </a>
         </div>
       </header>
@@ -200,12 +197,20 @@ export default function Home() {
           </div>
 
           <a
-            className="navy-button vrbo-btn"
+            className="vrbo-btn navy-button"
             href={property.vrbo}
             target="_blank"
             rel="noopener noreferrer"
           >
             View & Book {property.name} on VRBO
+            <span>→</span>
+          </a>
+		  <a
+            className="vrbo-btn gold-button"
+            href="#contact"
+            rel="noopener noreferrer"
+          >
+            Book directly with owner
             <span>→</span>
           </a>
         </div>
@@ -453,16 +458,6 @@ export default function Home() {
 
 <section id="scottsdale" className="discover section">
 
-  <div className="discover-photo">
-    <div className="discover-photo-overlay"></div>
-
-    <div className="discover-photo-label">
-      <span>ARIZONA</span>
-      <strong>SCOTTSDALE</strong>
-    </div>
-  </div>
-
-
   <div className="discover-copy">
 
     <div className="discover-content">
@@ -512,7 +507,7 @@ export default function Home() {
           <p>Your Scottsdale home away from home</p>
         </div>
         <a className="gold-button light-gold" href="#stays">
-          <span>▣</span> Compare all three stays before you book. <span>→</span>
+          Compare all three stays before you book. <span>→</span>
         </a>
       </section>
 	  
@@ -523,19 +518,18 @@ export default function Home() {
     {/* Left Content */}
     <div className="contact-copy">
 
-      <span className="eyebrow">CONTACT</span>
+      <span className="eyebrow">CONTACT AND</span>
 
       <h2>
-        Planning a
+        Book Directly 
         <br />
-        Scottsdale stay?
+        With Owner
       </h2>
 
       <div className="contact-line"></div>
 
       <p>
-        Have a question about which Three Keys property is right
-        for your trip? Contact Three Keys Scottsdale.
+        Have a question or ready to book? Contact the owner directly to check availability, ask questions, and arrange your stay at Three Keys Scottsdale.
       </p>
 
       <div className="contact-signature">
@@ -582,6 +576,10 @@ export default function Home() {
             fayhartgroup@gmail.com
           </a>
         </div>
+		
+		<div>
+          <a className="gold-button" href="mailto:fayhartgroup@gmail.com">Send Email</a>
+        </div>
 
       </div>
 
@@ -599,7 +597,10 @@ export default function Home() {
             773-230-3800
           </a>
         </div>
-
+		
+		<div>
+		<a className="gold-button" href="sms:+17732303800?body=Hello%2C%20I%20am%20interested%20in%20booking%20your%20Three%20Key%20Scottsdale%20property.">Send Message</a>
+		</div>
       </div>
 
 
@@ -626,10 +627,8 @@ export default function Home() {
       <footer id="contact">
         <div className="footer-main">
           <div className="footer-brand">
-            <div className="footer-logo">♜</div>
-            <div>
-              <strong>THREE KEYS</strong>
-              <strong>SCOTTSDALE</strong>
+            <div className="footer-logo">
+			<img src="/images/Three_Key_Scottsdale_footer_logo.png" alt="Three Key Scottsdale Footer logo" />
             </div>
           </div>
 
